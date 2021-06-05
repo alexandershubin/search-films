@@ -1,12 +1,14 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
   },
   devtool: 'source-map',
+  watch: true,
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     watchContentBase: true,
@@ -33,5 +35,4 @@ module.exports = {
       },
     ]
   },
-  mode: 'development'
 }
